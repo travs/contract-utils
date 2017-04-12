@@ -1,0 +1,29 @@
+{
+  "name": "contract-utils",
+  "version": "0.0.1",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/travs/contract-utils.git"
+  },
+  "keywords": [
+    "smart",
+    "contract",
+    "ethereum"
+  ],
+  "author": "Travis Jacobs",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/travs/contract-utils/issues"
+  },
+  "homepage": "https://github.com/travs/contract-utils#readme",
+  "dependencies": {
+    "ethereumjs-testrpc": "^3.0.3",
+    "web3": "^0.18.4",
+    "winston": "^2.3.1"
+  }
+}
