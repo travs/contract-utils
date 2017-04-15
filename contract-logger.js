@@ -1,6 +1,12 @@
+const fs = require('fs');
 const winston = require('winston');
 
 function logContract(contract){
+  // make logs dir if it doesn't exist
+  if(!fs.existsSync('./logs')){
+    fs.mkdirSync('./logs');
+  }
+
   // pass in the contract abstraction
   var logger = new (winston.Logger)({
     transports: [
