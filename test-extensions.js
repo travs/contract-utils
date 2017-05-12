@@ -13,7 +13,11 @@ function assertThrows (fn, args, msg) {
         resolve();
       },
       (error) => {
-        assert.include(error.toString(), 'invalid JUMP', msg + '\n\n' + error.toString());
+        var errstr = error.toString();
+        var newErrMsg = errstr.indexOf('invalid opcode') != -1;
+        var oldErrMsg = errstr.indexOf('invalid JUMP') != -1;
+        if(!newErrMsg && !oldErrMsg)
+          assert(false, 'Did not receive expected error message');
         resolve();
       })
   })
